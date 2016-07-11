@@ -8,13 +8,46 @@
 			body {
 				background-color: black;
 			}
-
 			div#board {
 				position : relative;
 				width: 1024px;
 				height: 863px;
 				margin: auto;
 				background: url("board.jpg") no-repeat;
+			}
+			div#messageArea {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				color: rgb(83, 175, 19);
+			}
+			table {
+				position: absolute;
+				left: 173px;
+				top: 98px;
+				border-spacing: 0px;
+			}
+			td {
+				width: 94px;
+				height: 94px;
+			}
+			form {
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+				padding: 15px;
+				background-color: rgb(83, 175, 19);
+			}
+			form input {
+				background-color: rgb(152, 207, 113);
+				border-color: rgb(83, 175, 19);
+				font-size: 1em;
+			}
+			.hit {
+				background: url("ship.png") no-repeat center center;
+			}
+			.miss {
+				background: url("miss.png") no-repeat center center;
 			}
 		</style>
 	</head>
@@ -85,11 +118,11 @@
 				<td id="65"></td>
 				<td id="66"></td>
 			</tr>
-			<form action="">
+		</table>
+			<form>
 				<input type="text" id="guessInput" placeholder="A0">
 				<input type="button" id="fireButton" value="Fire!">
 			</form>
-			</table>
 		</div>
 		<script src="jogo.js"></script>
 	</body>
