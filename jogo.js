@@ -60,6 +60,7 @@ var model = {
       this.ships[i].locations = locations;
     }
     console.log(locations);
+
   },
   generateShip: function() {
     var direction = Math.floor(Math.random() * 2);
@@ -138,15 +139,13 @@ function init() {
   fireButton.onclick = handleFireButton;
   var guessInput = document.getElementById("guessInput");
   guessInput.onkeypress = handleKeyPress;
-
   model.generateShipLocations();
-}
+};
 
 function handleFireButton() {
   var guessInput = document.getElementById("guessInput");
   var guess = guessInput.value;
   controller.processGuess(guess);
-
   guessInput.value = "";
 };
 
@@ -156,6 +155,6 @@ function handleKeyPress(e) {
     fireButton.click();
     return false;
   }
-}
+};
 
 window.onload = init;
